@@ -12,6 +12,7 @@ const App = () => {
 
   const clickPlus = e => {
     let currEvenet = e.target.innerHTML;
+    console.log(currEvenet);
     if (currEvenet === 'Good') {
       setGood(good + 1);
     }
@@ -34,9 +35,7 @@ const App = () => {
       <div className="conteiner">
         <Section titele={'Please leave feedback'}>
           <FeedbackOptions
-            good={good}
-            neutral={neutral}
-            bad={bad}
+            option={['Good', 'Neutral', 'Bad']}
             onLeaveFeedback={clickPlus}
           />
         </Section>
